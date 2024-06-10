@@ -11,4 +11,5 @@ Please see the following papers for details:
 (3) Shin PJ, Larson PE, Ohliger MA, Elad M, Pauly JM, Vigneron DB, Lustig M. Calibrationless parallel imaging reconstruction based on structured low-rank matrix completion. Magn Reson Med. 2014 Oct;72(4):959-70. doi: 10.1002/mrm.24997. Epub 2013 Nov 18. PMID: 24248734; PMCID: PMC4025999.
 
 The code is based on the implementations of Mark Bydder and can be found here:
-https://github.com/marcsous/parallel/tree/master
+
+https://github.com/marcsous/parallel 
