@@ -6,6 +6,7 @@ The code is based on the implementations of Mark Bydder and can be found here:
 https://github.com/marcsous/parallel 
    
 Contains the code for low-rank based post-processing pipeline for efficient denoising as well as SQ and TQ signal separation based on Dynamic Mode Decomposition (DMD):
+
 2) Licht, C., Ilicak, E., Boada, F. E., Guye, M., Zöllner, F. G., Schad, L. R., & Rapacchi, S. (2025). A noise-robust post-processing pipeline for accelerated phase-cycled 23Na Multi-Quantum Coherences MRI. Zeitschrift für Medizinische Physik, 35(1), 98-108. https://www.sciencedirect.com/science/article/pii/S093938892400117X
 
 The DMD code is based on the implementations of Efe Ilicak and can be found here:
