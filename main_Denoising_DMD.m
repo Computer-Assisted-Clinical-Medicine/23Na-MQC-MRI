@@ -15,7 +15,7 @@ clear; clc;
 TE_vec = 1:10;
 
 svdThresh = 0.07;     % Hard threshold as fraction of max singular value
-svdRank   = 15;       % Number of singular vectors retained by svds
+svdRank   = 12;       % Number of singular vectors retained by svds
 
 dmdRank = 4;          % DMD truncation rank
 dt      = 3.3e-3;     % Approx. echo spacing / sampling interval in seconds
@@ -79,12 +79,12 @@ tiledlayout(2, 2, 'TileSpacing', 'compact', 'Padding', 'compact');
 
 % Denoising comparison.
 nexttile;
-imagesc(abs(img_Xi90(:, :, sliceToShow, 1, 1)));
+imagesc(abs(img_Xi90(:, :, sliceToShow, 10, 4)));
 title('No denoising');
 formatImageAxes;
 
 nexttile;
-imagesc(abs(myimg_SVD(:, :, sliceToShow, 3, 4)));
+imagesc(abs(myimg_SVD(:, :, sliceToShow, 10, 4)));
 title('With SVD denoising');
 formatImageAxes;
 
