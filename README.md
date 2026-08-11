@@ -59,7 +59,7 @@ https://github.com/Computer-Assisted-Clinical-Medicine/DMD_Lung
 The code is primarily written in MATLAB.
 
 Recommended:
-- MATLAB R20XXx or newer
+- MATLAB R2024b or newer
 - Image Processing Toolbox
 - Signal Processing Toolbox
 - Wavelet Toolbox, if using MATLAB built-in thresholding functions such as `wthresh`
