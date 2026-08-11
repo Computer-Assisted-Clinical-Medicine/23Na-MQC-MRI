@@ -1,37 +1,76 @@
 # 23Na-MQC-MRI
-1) Contains the code for image reconstruction of Double Half-Echo 23Na and accelerated 23Na MQC MRI as presented in:
-Licht C, Reichert S, Bydder M, et al. Low-rank reconstruction for simultaneous double half-echo 23Na and undersampled 23Na multi-quantum coherences MRI. Magn Reson Med. 2024; 1-16. doi: 10.1002/mrm.30132
 
-The code is based on the implementations of Mark Bydder and can be found here:
-https://github.com/marcsous/parallel 
-   
-2) Contains the code for low-rank based post-processing pipeline for efficient denoising as well as SQ and TQ signal separation based on Dynamic Mode Decomposition (DMD) as presented in:
-Licht, C., Ilicak, E., Boada, F. E., Guye, M., Zöllner, F. G., Schad, L. R., & Rapacchi, S. (2025). A noise-robust post-processing pipeline for accelerated phase-cycled 23Na Multi-Quantum Coherences MRI. Zeitschrift für Medizinische Physik, 35(1), 98-108. https://www.sciencedirect.com/science/article/pii/S093938892400117X
+Code for image reconstruction and post-processing of double half-echo, multi-quantum coherence, and compressed-sensing 23Na MRI.
 
-The DMD code is based on the implementations of Efe Ilicak and can be found here:
+This repository contains implementations associated with three published works on 23Na MRI reconstruction, denoising, signal separation, and compressed sensing.
+
+## Repository Structure
+
+| Folder | Description | Associated Paper |
+|---|---|---|
+| `DHE_SAKE/` | Double half-echo 23Na and accelerated 23Na MQC MRI reconstruction | Licht et al., Magn Reson Med, 2024 |
+| `Denoising_DMD/` | Low-rank denoising and SQ/TQ signal separation using DMD | Licht et al., Z Med Phys, 2025 |
+| `5D_CS/` | Multi-dimensional compressed sensing reconstruction for undersampled 23Na MQC MRI | Licht et al., Magn Reson Med, 2023 |
+
+## Publications
+
+### 1. Double Half-Echo and Accelerated 23Na MQC MRI
+
+Licht C, Reichert S, Bydder M, et al.  
+**Low-rank reconstruction for simultaneous double half-echo 23Na and undersampled 23Na multi-quantum coherences MRI.**  
+*Magnetic Resonance in Medicine.* 2024; 1-16.  
+doi: [10.1002/mrm.30132](https://doi.org/10.1002/mrm.30132)
+
+Code: `DHE_SAKE/`
+
+This implementation is based on code by Mark Bydder:  
+https://github.com/marcsous/parallel
+
+### 2. Low-Rank Denoising and DMD-Based Signal Separation
+
+Licht C, Ilicak E, Boada FE, Guye M, Zöllner FG, Schad LR, Rapacchi S.  
+**A noise-robust post-processing pipeline for accelerated phase-cycled 23Na Multi-Quantum Coherences MRI.**  
+*Zeitschrift für Medizinische Physik.* 2025;35(1):98-108.  
+https://www.sciencedirect.com/science/article/pii/S093938892400117X
+
+Code: `Denoising_DMD/`
+
+The DMD implementation is based on code by Efe Ilicak:  
 https://github.com/Computer-Assisted-Clinical-Medicine/DMD_Lung
 
-3) Contains the code for multi-dimensional Compressed Sensing (CS) reconstruction of undersampled 23Na multi-quantum coherences MRI as presented in:
-Licht, C, Reichert, S, Guye, M, Schad, LR, Rapacchi, S. Multidimensional compressed sensing to advance 23Na multi-quantum coherences MRI. Magn Reson Med. 2023; 1-16. doi: 10.1002/mrm.29902
+### 3. Multi-Dimensional Compressed Sensing for 23Na MQC MRI
 
-The CS code is based on:
-Goldstein et al.,2009, https://doi.org/10.1137/080725891
-Montesinos et al., 2014, https://doi.org/10.1002/mrm.24936; GitHub: https://github.com/HGGM-LIM/Split-Bregman-ST-Total-Variation-MRI
+Licht C, Reichert S, Guye M, Schad LR, Rapacchi S.  
+**Multidimensional compressed sensing to advance 23Na multi-quantum coherences MRI.**  
+*Magnetic Resonance in Medicine.* 2023; 1-16.  
+doi: [10.1002/mrm.29902](https://doi.org/10.1002/mrm.29902)
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Please see the following papers for details:
+Code: `5D_CS/`
 
-(1) Bydder M, Ali F, Ghodrati V, Hu P, Yao J, Ellingson BM. Minimizing echo and repetition times in magnetic resonance imaging using a double half-echo k-space acquisition and low-
-rank reconstruction. NMR Biomed. 2021;34(4):e4458. doi:10.1002/nbm.4458.
+This implementation is based on:
 
-(2) Bydder M, Ali F, Saucedo A, Ghodrati V, Samsonov A, Akhtari M, Wang C, Hagiwara A, Yao J, Ellingson BM. Low-rank off-resonance correction for double half-echo k-space        acquisitions. Magn Reson Imaging. 2022;94:43–47. doi:10.1016/j.mri.2022.08.017.
+- Goldstein et al., 2009. doi: [10.1137/080725891](https://doi.org/10.1137/080725891)
+- Montesinos et al., 2014. doi: [10.1002/mrm.24936](https://doi.org/10.1002/mrm.24936)  
+  GitHub: https://github.com/HGGM-LIM/Split-Bregman-ST-Total-Variation-MRI
 
-(3) Shin PJ, Larson PEZ, Ohliger MA, Elad M, Pauly JM, Vigneron DB, Lustig M. Calibrationless parallel imaging reconstruction based on structured low-rank matrix completion. Magn Reson Med. 2014;72(4):959–970. doi:10.1002/mrm.24997.
+## Requirements
 
-(4) Bydder M, Du J. Noise reduction in multiple-echo data sets using singular value decomposition. Magn Reson Imaging. 2006;24(7):849–856. doi:10.1016/j.mri.2006.04.003.
+The code is primarily written in MATLAB.
 
-(5) Schmid PJ. Dynamic mode decomposition of numerical and experimental data. J Fluid Mech. 2010;656:5–28. doi:10.1017/S0022112010001217.
+Recommended:
+- MATLAB R20XXx or newer
+- Image Processing Toolbox
+- Signal Processing Toolbox
+- Wavelet Toolbox, if using MATLAB built-in thresholding functions such as `wthresh`
 
-(6) Goldstein, Tom, and Stanley Osher. "The split Bregman method for L1-regularized problems." SIAM journal on imaging sciences 2.2 (2009): 323-343.
+Additional requirements may differ between subfolders. See the README or comments inside each folder for details.
 
-(7) P Montesinos, J F P J Abascal, L Cussó, J J Vaquero, M Desco. Application of the compressed sensing technique to self-gated cardiac cine sequences in small animals. Magn Reson Med., 72(2): 369–380, 2013. DOI: http://dx.doi.org/10.1002/mrm.24936
+## Usage
+
+Each subfolder contains code corresponding to one reconstruction or post-processing workflow. Please refer to the scripts inside each folder for example usage.
+
+Example:
+
+```matlab
+cd Denoising_DMD
+main_Denoising_DMD
