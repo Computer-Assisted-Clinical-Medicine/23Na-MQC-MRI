@@ -1,6 +1,6 @@
 # 23Na-MQC-MRI
 
-Code for image reconstruction and post-processing of double half-echo, multi-quantum coherence, and compressed-sensing 23Na MRI.
+Code for image reconstruction and post-processing of undersampled 23Na multi-quantum coherences (MQC) and 23Na double half-echo MRI using multi-dimensional low-rank and sparse models.
 
 This repository contains implementations associated with three published works on 23Na MRI reconstruction, denoising, signal separation, and compressed sensing.
 
